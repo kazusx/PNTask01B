@@ -28,21 +28,21 @@ namespace PNTask01
         [Test]
         public void TimeSpanExtendedTest()
         {
-            var extended = new TimeUtil.DateTimeSpan()
-                    { From = new DateTime(2020,4,1), To = new DateTime(2020,4,30)}
-                .GetTimeSpanExtended();
+            var extended = new TimeSpanExtended(
+                new DateTime(2020,4,1), 
+                new DateTime(2020,4,30));
 			
-            var extended2 = new TimeUtil.DateTimeSpan()
-                    { From = new DateTime(2000,5,1), To = new DateTime(2000,5,31)}
-                .GetTimeSpanExtended();
+            var extended2 = new TimeSpanExtended(
+                new DateTime(2000,5,1),
+                new DateTime(2000,5,31));
 			
-            var extended3 = new TimeUtil.DateTimeSpan()
-                    { From = new DateTime(2000,5,1), To = new DateTime(2000,6,1)}
-                .GetTimeSpanExtended();
+            var extended3 = new TimeSpanExtended(
+                new DateTime(2000,5,1),
+                new DateTime(2000,6,1));
 			
-            var extended4 = new TimeUtil.DateTimeSpan()
-                    { From = new DateTime(2020,1,1), To = new DateTime(2021,2,1)}
-                .GetTimeSpanExtended();
+            var extended4 =  new TimeSpanExtended(
+                new DateTime(2020,1,1),
+                new DateTime(2021,2,1));
 			
             Assert.IsTrue(extended.ToStringEx() == "1Months"); 
             Assert.IsTrue(extended2.ToStringEx() == "1Months");
