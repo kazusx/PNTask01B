@@ -1,0 +1,9 @@
+**/.vs/*
+**/bin/*
+**/obj/*
+node_modules
+package-lock.json
+.idea
+packages
+@pending
+@sub
